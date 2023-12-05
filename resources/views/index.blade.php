@@ -25,7 +25,7 @@
 			<th>Alamat</th>
 			<th>Opsi</th>
 		</tr>
-		@foreach($pegawai as $p)
+		@foreach($pegawai1 as $p)
 		<tr>
 			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->pegawai_jabatan }}</td>
@@ -39,5 +39,5 @@
 		</tr>
 		@endforeach
 	</table>
-    {{ $pegawai->links() }}
+    {{ $pegawai1->links() }}
 @endsection
