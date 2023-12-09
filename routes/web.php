@@ -74,3 +74,24 @@ Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus')
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
+
+//route CRUD Nilai
+Route::get('/nilaikuliah','App\Http\Controllers\NilaiController@indexnilai');
+Route::get('/nilaikuliah/tambah','App\Http\Controllers\NilaiController@tambah');
+Route::post('/nilaikuliah/storenilai','App\Http\Controllers\NilaiController@storenilai');
+
+//route CRUD Keranjang Belanja
+Route::get('/keranjangbelanja','App\Http\Controllers\KeranjangBelanjaController@index');
+Route::get('/keranjangbelanja/beli','App\Http\Controllers\KeranjangBelanjaController@beli');
+Route::post('/keranjangbelanja/store','App\Http\Controllers\KeranjangBelanjaController@store');
+Route::post('/keranjangbelanja/update','App\Http\Controllers\KeranjangBelanjaController@update');
+Route::get('/keranjangbelanja/hapus/{id}','App\Http\Controllers\KeranjangBelanjaController@hapus');
+
+//route CRUD Kabel
+Route::get('/kabel','App\Http\Controllers\kabelcontroller@indexkabel');
+Route::get('/kabel/tambahkabel','App\Http\Controllers\kabelcontroller@tambahkabel');
+Route::post('/kabel/storekabel','App\Http\Controllers\kabelcontroller@storekabel');
+Route::get('/kabel/editkabel/{kodekabel}','App\Http\Controllers\kabelcontroller@editkabel');
+Route::post('/kabel/updatekabel','App\Http\Controllers\kabelcontroller@update');
+Route::get('/kabel/hapuskabel/{kodekabel}','App\Http\Controllers\kabelcontroller@hapuskabel');
+Route::get('/kabel/viewkabel/{kodekabel}','App\Http\Controllers\kabelcontroller@viewkabel');

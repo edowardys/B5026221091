@@ -12,7 +12,7 @@
 	<br/>
 @endsection
 @section('konten')
-	@foreach($pegawai1 as $p)
+	@foreach($pegawai as $p)
 	<form action="/pegawai/update" method="post">
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $p->pegawai_id }}">

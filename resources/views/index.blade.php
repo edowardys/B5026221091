@@ -1,7 +1,7 @@
 @extends('master')
-    @section('title', 'Data Pegawai')
+@section('title', 'Data Pegawai')
+@section('konten')
 
-    @section('konten')
     <h2>www.malasngoding.com</h2>
 	<h3>Data Pegawai</h3>
 
@@ -25,13 +25,15 @@
 			<th>Alamat</th>
 			<th>Opsi</th>
 		</tr>
-		@foreach($pegawai1 as $p)
+		@foreach($pegawai as $p)
 		<tr>
 			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->pegawai_jabatan }}</td>
 			<td>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
+                <a href="/pegawai/view/{{ $p->pegawai_id }}" class="btn btn-warning">View</a>
+				|
 				<a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-warning">Edit</a>
 				|
 				<a href="/pegawai/hapus/{{ $p->pegawai_id }}" class="btn btn-danger">Hapus</a>
@@ -39,5 +41,5 @@
 		</tr>
 		@endforeach
 	</table>
-    {{ $pegawai1->links() }}
+    {{ $pegawai->links() }}
 @endsection
