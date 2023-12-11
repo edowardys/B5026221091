@@ -95,3 +95,6 @@ Route::get('/kabel/editkabel/{kodekabel}','App\Http\Controllers\kabelcontroller@
 Route::post('/kabel/updatekabel','App\Http\Controllers\kabelcontroller@update');
 Route::get('/kabel/hapuskabel/{kodekabel}','App\Http\Controllers\kabelcontroller@hapuskabel');
 Route::get('/kabel/viewkabel/{kodekabel}','App\Http\Controllers\kabelcontroller@viewkabel');
+
+Route::get('/chat','App\Http\Controllers\chatcontroller@homechat');
+Route::get('/chat/ChatMessage','App\Http\Controllers\chatcontroller@indexchat');
